@@ -1,5 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
+    background-color: lightblue;
+}
+h1 {
+    color: red;
     text-align: center;
-    margin-top: 50px;
+}
+p {
+    font-size: 18px;
+    text-align: center;
+    color: darkgreen;
 }
