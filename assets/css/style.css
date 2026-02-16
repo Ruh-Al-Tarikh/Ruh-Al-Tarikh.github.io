@@ -42,6 +42,9 @@ main {
 }
 
 section {
+    /* Bolt: Improves rendering performance for off-screen sections */
+    content-visibility: auto;
+    contain-intrinsic-size: 0 100px;
     margin-bottom: 2rem;
     background-color: #1e1e1e;
     padding: 1.5rem;
