@@ -13,3 +13,7 @@
 ## 2026-05-21 - [Brand-Aligned Selection and Smooth Motion]
 **Learning:** Micro-interactions like a custom `::selection` color that matches the brand identity (e.g., using #1ee Cyan) provide a subtle touch of delight that makes the site feel more cohesive. Additionally, implementing `scroll-behavior: smooth` (while respecting `prefers-reduced-motion`) significantly improves the perceived quality of navigation, especially when jumping to internal anchors like the "Skip to main content" link.
 **Action:** Always wrap `scroll-behavior: smooth` in a `prefers-reduced-motion: no-preference` media query and use brand-aligned colors for selection styles to enhance site personality.
+
+## 2026-05-22 - [Standardized Accessibility and Metadata Polish]
+**Learning:** Small polishes like adding `aria-label` to navigation landmarks, consistent page titles, and setting a `theme-color` meta tag for mobile browsers collectively elevate the site's perceived quality and accessibility. Improving color contrast for secondary text (like the footer) from #888 to #aaa ensures WCAG AA compliance and better readability on dark backgrounds.
+**Action:** Include a "polish pass" for every feature, ensuring landmark labels are present, metadata is optimized for mobile, and color contrast meets accessibility standards.
