@@ -57,11 +57,7 @@ header h1 {
 a {
     color: #0af;
     text-decoration: none;
-    transition: color 0.3s, text-decoration 0.3s, transform 0.2s ease-in-out;
-}
-
-main section p a {
-    text-decoration: underline;
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 a:hover {
