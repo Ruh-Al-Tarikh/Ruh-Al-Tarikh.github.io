@@ -1,3 +1,18 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+::selection {
+    background-color: #1ee;
+    color: #000;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -19,20 +34,85 @@ header h1 {
     color: #0af;
 }
 
+/* Skip link - hidden until focused */
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    background: #0af;
+    color: #000;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    transition: transform 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 5px 5px;
+}
+
+.skip-link:focus {
+    transform: translate(-50%, 0);
+}
+
+a {
+    color: #0af;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #1ee;
+    text-decoration: underline;
+}
+
+a:active {
+    opacity: 0.7;
+}
+
+/* Ensure links in content area are underlined for accessibility (WCAG 1.4.1) */
+main section a {
+    text-decoration: underline;
+}
+
 nav {
     margin-top: 0.5rem;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0.2rem 0.8rem;
+}
+
 nav a {
-    color: #0af;
-    text-decoration: none;
-    margin: 0 0.8rem;
     font-weight: bold;
-    transition: color 0.3s;
+    display: inline-block;
 }
 
 nav a:hover {
+    transform: translateY(-1px);
+}
+
+nav a:active {
+    transform: translateY(0);
+}
+
+nav a[aria-current="page"] {
     color: #1ee;
+    border-bottom: 2px solid #1ee;
+}
+
+/* Focus indicator for keyboard navigation */
+:focus-visible {
+    outline: 2px solid #1ee;
+    outline-offset: 2px;
 }
 
 main {
@@ -60,7 +140,7 @@ h2 {
 footer p {
     margin: 0;
     font-size: 0.9rem;
-    color: #888;
+    color: #aaa;
 }
 
 /* Responsive */
@@ -68,9 +148,15 @@ footer p {
     header h1 {
         font-size: 1.5rem;
     }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 0.3rem 0;
+    }
     nav a {
         display: block;
-        margin: 0.3rem 0;
+        padding: 0.6rem 1rem;
     }
     main {
         margin: 1rem;
