@@ -22,6 +22,9 @@
 **Learning:** Improving accessibility often involves visual cues beyond just color. Underlining links in prose (WCAG 1.4.1) and ensuring consistent heading hierarchies across the site significantly enhances the user experience for everyone. Adding subtle hover transitions (like a small lift) provides immediate, delightful feedback that makes the interface feel more responsive.
 **Action:** Ensure links in body text are underlined by default and use subtle CSS transforms for interactive feedback on navigation elements.
 
+## 2026-05-26 - [Subtle Entrance Animations & Branded Scrollbars]
+**Learning:** Subtle entrance animations (fade-in + slight slide) provide a polished, premium feel for content loading. Branded scrollbars further unify the UI design language. Both must be implemented carefully: animations should respect `prefers-reduced-motion`, and scrollbars should maintain enough contrast to remain functional.
+**Action:** Use `animation` with a `prefers-reduced-motion: reduce` fallback and `::-webkit-scrollbar` for cohesive branding on webkit browsers.
 ## 2026-05-25 - [Section Entrance Animations & Path Portability]
 **Learning:** Adding subtle entrance animations (e.g., a 0.6s fade-in) can make a static site feel more dynamic and modern. However, these must always respect `prefers-reduced-motion` to remain accessible. Additionally, for GitHub Pages projects, using relative paths for assets (like `../assets/css/style.css`) is more robust than absolute paths (`/assets/css/style.css`), especially when the site is hosted on a sub-path.
 **Action:** Use relative paths for cross-page asset linking and always wrap animations in `prefers-reduced-motion` media queries.
