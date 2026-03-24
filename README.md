@@ -36,9 +36,9 @@
 | 🏠 index.html | File | Home page |
 | ℹ️ about.html | File | About the project |
 | 📁 assets/ | Folder | Images, CSS, JS |
-| &nbsp;&nbsp;🖼️ images/ | Folder | Image files |
-| &nbsp;&nbsp;🎨 css/ | Folder | Stylesheets |
-| &nbsp;&nbsp;⚡ js/ | Folder | JavaScript files |
+| 🖼️ images/ | Folder | Image files |
+| 🎨 css/ | Folder | Stylesheets |
+| ⚡ js/ | Folder | JavaScript files |
 | ⚙️ _config.yml | File | GitHub Pages configuration |
 | 📄 README.md | File | This file |
 
