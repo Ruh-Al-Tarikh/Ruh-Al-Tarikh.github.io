@@ -227,7 +227,6 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     /* Palette: Subtle entrance animation */
     animation: fadeIn 0.6s ease-out forwards;
-    animation: fadeIn 0.6s ease-out;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
